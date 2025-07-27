@@ -159,7 +159,7 @@ type
   TAssignTransparentBitmapTest_24Bit = class(TTransparentBitmapTest)
   public
     {$IFDEF FPC}
-    constructor Create;
+    constructor Create; override;
     {$ELSE}
     constructor Create(AMethodName: String); override;
     {$ENDIF}
@@ -210,7 +210,7 @@ type
   TDrawTransparentBitmapTest_32Bit = class(TTransparentBitmapTest)
   public
     {$IFDEF FPC}
-    constructor Create;
+    constructor Create; override;
     {$ELSE}
     constructor Create(AMethodName: String); override;
     {$ENDIF}
@@ -261,7 +261,7 @@ type
   TAssignTransparentBitmapTest_32Bit = class(TTransparentBitmapTest)
   public
     {$IFDEF FPC}
-    constructor Create;
+    constructor Create; override;
     {$ELSE}
     constructor Create(AMethodName: String); override;
     {$ENDIF}
