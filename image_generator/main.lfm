@@ -14,7 +14,7 @@ object Form1: TForm1
     Width = 75
     Caption = 'Run'
     TabOrder = 0
-    OnClick = Button1Click
+    OnClick = RunButtonClick
   end
   object Image1: TImage
     AnchorSideLeft.Control = Owner
@@ -54,5 +54,14 @@ object Form1: TForm1
     Top = 12
     Width = 32
     BorderSpacing.Around = 12
+  end
+  object Button2: TButton
+    Left = 96
+    Height = 25
+    Top = 56
+    Width = 75
+    Caption = 'Run 32bpp'
+    TabOrder = 1
+    OnClick = RunButtonClick
   end
 end
