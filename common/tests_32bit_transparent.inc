@@ -34,6 +34,22 @@ begin
   inherited;
 end;
 
+// Border part must be transparent (= white in this setup)
+// Test bitmap is loaded from file
+// Transparent is set before loading
+procedure TDrawTransparentBitmapTest_32Bit_Transparent.BorderTransparent_BeforeLoad;
+begin
+  inherited;
+end;
+
+// Border part must be transparent (= white in this setup)
+// Test bitmap is loaded from file
+// Transparent is set after loading
+procedure TDrawTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterLoad;
+begin
+  inherited;
+end;
+
 {------------------------------------------------------------------------------}
 {                   32-bit Assign tests with Transparent = TRUE                }
 {------------------------------------------------------------------------------}
@@ -62,6 +78,22 @@ end;
 // Border part must be transparent (= white in this setup)
 // Transparent is set at end
 procedure TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AtEnd;
+begin
+  inherited;
+end;
+
+// Border part must be transparent (= white in this setup)
+// Image is loaded from file
+// Transparent is set BEFORE loading image
+procedure TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_BeforeLoad;
+begin
+  inherited;
+end;
+
+// Border part must be transparent (= white in this setup)
+// Image is loaded from file
+// Transparent is set AFTER loading image
+procedure TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterLoad;
 begin
   inherited;
 end;

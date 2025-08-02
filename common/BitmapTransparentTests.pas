@@ -13,7 +13,7 @@ uses
   Classes, SysUtils,
   Graphics, Controls, ExtCtrls, Forms,
   {$IFDEF FPC}
-   fpcunit, testutils, testregistry;
+   fpcunit, testregistry;
   {$ELSE}
    TestFrameWork;
   {$ENDIF}
@@ -44,18 +44,24 @@ type
     procedure BorderTransparent_AfterSetSize; virtual;
     procedure BorderTransparent_AfterHandle; virtual;
     procedure BorderTransparent_AtEnd; virtual;
+    procedure BorderTransparent_BeforeLoad; virtual;
+    procedure BorderTransparent_AfterLoad; virtual;
 
     // Always sets TransparentColor
     // Set Transparent BEFORE TransparentColor
     procedure BorderTransparent_AfterCreate_T_TColor; virtual;
     procedure BorderTransparent_AfterSetSize_T_TColor; virtual;
     procedure BorderTransparent_AfterHandle_T_TColor; virtual;
-    procedure BorderTransparent_AtEnd_BeforeTransparentColor; virtual;
+    procedure BorderTransparent_AtEnd_T_TColor; virtual;
+    procedure BorderTransparent_BeforeLoad_T_TColor; virtual;
+    procedure BorderTransparent_AfterLoad_T_TColor; virtual;
     // Set Transparent AFTER TransparentColor
     procedure BorderTransparent_AfterCreate_TColor_T; virtual;
     procedure BorderTransparent_AfterSetSize_TColor_T; virtual;
     procedure BorderTransparent_AfterHandle_TColor_T; virtual;
     procedure BorderTransparent_AtEnd_TColor_T; virtual;
+    procedure BorderTransparent_BeforeLoad_TColor_T; virtual;
+    procedure BorderTransparent_AfterLoad_TColor_T; virtual;
     // Set Transparent, then TransparentMode=tmFixed, finally TransparentColor
     procedure BorderTransparent_AfterCreate_T_TMode_TColor; virtual;
     procedure BorderTransparent_AfterSetSize_T_TMode_TColor; virtual;
@@ -76,15 +82,19 @@ type
 
     // Always set TransparentColor
     // Set Transparent BEFORE TransparentColor
-    procedure InnerRectTransparent_AfterCreate_BeforeTransparentColor; virtual;
-    procedure InnerRectTransparent_AfterSetSize_BeforeTransparentColor; virtual;
-    procedure InnerRectTransparent_AfterHandle_BeforeTransparentColor; virtual;
-    procedure InnerRectTransparent_AtEnd_BeforeTransparentColor; virtual;
+    procedure InnerRectTransparent_AfterCreate_T_TColor; virtual;
+    procedure InnerRectTransparent_AfterSetSize_T_TColor; virtual;
+    procedure InnerRectTransparent_AfterHandle_T_TColor; virtual;
+    procedure InnerRectTransparent_AtEnd_T_TColor; virtual;
+    procedure InnerRectTransparent_BeforeLoad_T_TColor; virtual;
+    procedure InnerRectTransparent_AfterLoad_T_TColor; virtual;
     // Set Transparent AFTER TransparentColor
-    procedure InnerRectTransparent_AfterCreate_AfterTransparentColor; virtual;
-    procedure InnerRectTransparent_AfterSetSize_AfterTransparentColor; virtual;
-    procedure InnerRectTransparent_AfterHandle_AfterTransparentColor; virtual;
-    procedure InnerRectTransparent_AtEnd_AfterTransparentColor; virtual;
+    procedure InnerRectTransparent_AfterCreate_TColor_T; virtual;
+    procedure InnerRectTransparent_AfterSetSize_TColor_T; virtual;
+    procedure InnerRectTransparent_AfterHandle_TColor_T; virtual;
+    procedure InnerRectTransparent_AtEnd_TColor_T; virtual;
+    procedure InnerRectTransparent_BeforeLoad_TColor_T; virtual;
+    procedure InnerRectTransparent_AfterLoad_TColor_T; virtual;
     // Set Transparent, then TransparentMode=tmFixed, finally TransparentColor
     procedure InnerRectTransparent_AfterCreate_T_TMode_TColor; virtual;
     procedure InnerRectTransparent_AfterSetSize_T_TMode_TColor; virtual;
@@ -128,6 +138,8 @@ type
     procedure BorderTransparent_AfterSetSize; override;
     procedure BorderTransparent_AfterHandle; override;
     procedure BorderTransparent_AtEnd; override;
+    procedure BorderTransparent_BeforeLoad; override;
+    procedure BorderTransparent_AfterLoad; override;
 
     // The InnerRect tests are not useful here because they would require
     // setting the TransparentColor.
@@ -140,13 +152,17 @@ type
     procedure BorderTransparent_AfterCreate_T_TColor; override;
     procedure BorderTransparent_AfterSetSize_T_TColor; override;
     procedure BorderTransparent_AfterHandle_T_TColor; override;
-    procedure BorderTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure BorderTransparent_AtEnd_T_TColor; override;
+    procedure BorderTransparent_BeforeLoad_T_TColor; override;
+    procedure BorderTransparent_AfterLoad_T_TColor; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_T_TColor; override;
+    procedure InnerRectTransparent_AfterSetSize_T_TColor; override;
+    procedure InnerRectTransparent_AfterHandle_T_TColor; override;
+    procedure InnerRectTransparent_AtEnd_T_TColor; override;
+    procedure InnerRectTransparent_BeforeLoad_T_TColor; override;
+    procedure InnerRectTransparent_AfterLoad_T_TColor; override;
   end;
 
   // Set TransparentColor, then set Transparent = true. TransparentMode is not used
@@ -157,12 +173,16 @@ type
     procedure BorderTransparent_AfterSetSize_TColor_T; override;
     procedure BorderTransparent_AfterHandle_TColor_T; override;
     procedure BorderTransparent_AtEnd_TColor_T; override;
+    procedure BorderTransparent_BeforeLoad_TColor_T; override;
+    procedure BorderTransparent_AfterLoad_TColor_T; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_AfterTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_TColor_T; override;
+    procedure InnerRectTransparent_AfterSetSize_TColor_T; override;
+    procedure InnerRectTransparent_AfterHandle_TColor_T; override;
+    procedure InnerRectTransparent_AtEnd_TColor_T; override;
+    procedure InnerRectTransparent_BeforeLoad_TColor_T; override;
+    procedure InnerRectTransparent_AfterLoad_TColor_T; override;
   end;
 
   // First set Transparent, then TransparentMode, finally TransparentColor
@@ -238,6 +258,8 @@ type
     procedure BorderTransparent_AfterSetSize; override;
     procedure BorderTransparent_AfterHandle; override;
     procedure BorderTransparent_AtEnd; override;
+    procedure BorderTransparent_BeforeLoad; override;
+    procedure BorderTransparent_AfterLoad; override;
 
     // The InnerRect tests are not useful here because they would require
     // setting the TransparentColor.
@@ -250,13 +272,17 @@ type
     procedure BorderTransparent_AfterCreate_T_TColor; override;
     procedure BorderTransparent_AfterSetSize_T_TColor; override;
     procedure BorderTransparent_AfterHandle_T_TColor; override;
-    procedure BorderTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure BorderTransparent_AtEnd_T_TColor; override;
+    procedure BorderTransparent_BeforeLoad_T_TColor; override;
+    procedure BorderTransparent_AfterLoad_T_TColor; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_T_TColor; override;
+    procedure InnerRectTransparent_AfterSetSize_T_TColor; override;
+    procedure InnerRectTransparent_AfterHandle_T_TColor; override;
+    procedure InnerRectTransparent_AtEnd_T_TColor; override;
+    procedure InnerRectTransparent_BeforeLoad_T_TColor; override;
+    procedure InnerRectTransparent_AfterLoad_T_TColor; override;
   end;
 
   // First set TransparentColor, then Transparent. TransparentMode is not used
@@ -267,12 +293,16 @@ type
     procedure BorderTransparent_AfterSetSize_TColor_T; override;
     procedure BorderTransparent_AfterHandle_TColor_T; override;
     procedure BorderTransparent_AtEnd_TColor_T; override;
+    procedure BorderTransparent_BeforeLoad_TColor_T; override;
+    procedure BorderTransparent_AfterLoad_TColor_T; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_AfterTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_TColor_T; override;
+    procedure InnerRectTransparent_AfterSetSize_TColor_T; override;
+    procedure InnerRectTransparent_AfterHandle_TColor_T; override;
+    procedure InnerRectTransparent_AtEnd_TColor_T; override;
+    procedure InnerRectTransparent_BeforeLoad_TColor_T; override;
+    procedure InnerRectTransparent_AfterLoad_TColor_T; override;
   end;
 
   // First set Transparent, then TransparentMode, finally TransparentColor
@@ -348,6 +378,8 @@ type
     procedure BorderTransparent_AfterSetSize; override;
     procedure BorderTransparent_AfterHandle; override;
     procedure BorderTransparent_AtEnd; override;
+    procedure BorderTransparent_BeforeLoad; override;
+    procedure BorderTransparent_AfterLoad; override;
 
     // The InnerRect tests are not useful here because they would require
     // setting the TransparentColor.
@@ -360,13 +392,17 @@ type
     procedure BorderTransparent_AfterCreate_T_TColor; override;
     procedure BorderTransparent_AfterSetSize_T_TColor; override;
     procedure BorderTransparent_AfterHandle_T_TColor; override;
-    procedure BorderTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure BorderTransparent_AtEnd_T_TColor; override;
+    procedure BorderTransparent_BeforeLoad_T_TColor; override;
+    procedure BorderTransparent_AfterLoad_T_TColor; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_T_TColor; override;
+    procedure InnerRectTransparent_AfterSetSize_T_TColor; override;
+    procedure InnerRectTransparent_AfterHandle_T_TColor; override;
+    procedure InnerRectTransparent_AtEnd_T_TColor; override;
+    procedure InnerRectTransparent_BeforeLoad_T_TColor; override;
+    procedure InnerRectTransparent_AfterLoad_T_TColor; override;
   end;
 
   // Set TransparentColor, then set Transparent = true. TransparentMode is not used
@@ -377,12 +413,16 @@ type
     procedure BorderTransparent_AfterSetSize_TColor_T; override;
     procedure BorderTransparent_AfterHandle_TColor_T; override;
     procedure BorderTransparent_AtEnd_TColor_T; override;
+    procedure BorderTransparent_BeforeLoad_TColor_T; override;
+    procedure BorderTransparent_AfterLoad_TColor_T; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_AfterTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_TColor_T; override;
+    procedure InnerRectTransparent_AfterSetSize_TColor_T; override;
+    procedure InnerRectTransparent_AfterHandle_TColor_T; override;
+    procedure InnerRectTransparent_AtEnd_TColor_T; override;
+    procedure InnerRectTransparent_BeforeLoad_TColor_T; override;
+    procedure InnerRectTransparent_AfterLoad_TColor_T; override;
   end;
 
 
@@ -410,6 +450,8 @@ type
     procedure BorderTransparent_AfterSetSize; override;
     procedure BorderTransparent_AfterHandle; override;
     procedure BorderTransparent_AtEnd; override;
+    procedure BorderTransparent_BeforeLoad; override;
+    procedure BorderTransparent_AfterLoad; override;
 
     // The InnerRect tests are not useful here because they would require
     // setting the TransparentColor.
@@ -422,13 +464,17 @@ type
     procedure BorderTransparent_AfterCreate_T_TColor; override;
     procedure BorderTransparent_AfterSetSize_T_TColor; override;
     procedure BorderTransparent_AfterHandle_T_TColor; override;
-    procedure BorderTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure BorderTransparent_AtEnd_T_TColor; override;
+    procedure BorderTransparent_BeforeLoad_T_TColor; override;
+    procedure BorderTransparent_AfterLoad_T_TColor; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_BeforeTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_BeforeTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_T_TColor; override;
+    procedure InnerRectTransparent_AfterSetSize_T_TColor; override;
+    procedure InnerRectTransparent_AfterHandle_T_TColor; override;
+    procedure InnerRectTransparent_AtEnd_T_TColor; override;
+    procedure InnerRectTransparent_BeforeLoad_T_TColor; override;
+    procedure InnerRectTransparent_AfterLoad_T_TColor; override;
   end;
 
   // First set TransparentColor, then Transparent. TransparentMode is not used
@@ -439,14 +485,17 @@ type
     procedure BorderTransparent_AfterSetSize_TColor_T; override;
     procedure BorderTransparent_AfterHandle_TColor_T; override;
     procedure BorderTransparent_AtEnd_TColor_T; override;
+    procedure BorderTransparent_BeforeLoad_TColor_T; override;
+    procedure BorderTransparent_AfterLoad_TColor_T; override;
 
     // The inner blue rectangle should be transparent
-    procedure InnerRectTransparent_AfterCreate_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterSetSize_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AfterHandle_AfterTransparentColor; override;
-    procedure InnerRectTransparent_AtEnd_AfterTransparentColor; override;
+    procedure InnerRectTransparent_AfterCreate_TColor_T; override;
+    procedure InnerRectTransparent_AfterSetSize_TColor_T; override;
+    procedure InnerRectTransparent_AfterHandle_TColor_T; override;
+    procedure InnerRectTransparent_AtEnd_TColor_T; override;
+    procedure InnerRectTransparent_BeforeLoad_TColor_T; override;
+    procedure InnerRectTransparent_AfterLoad_TColor_T; override;
   end;
-
 
 
 implementation
@@ -539,17 +588,13 @@ end;
     2: immediately after SetSize
     3: after handle creation (i.e. background filling)
     4: at end
-   11: like 1, set Transparent, then TransparentColor
-   12: like 2, set Transparent, then TransparentColor
-   13: like 3, set Transparent, then TransparentColor
-   14: like 4, set Transparent, then TransparentColor
-   21: like 1, set TransparentColor, then set Transparent
-   22: like 2, set TransparentColor, then set Transparent
-   23: like 3, set TransparentColor, then set Transparent
-   24: like 4, set TransparentColor, then set Transparent
-   31..34: like 1..4, set Transparent, TransparentMode=tmfixed, then TransparentColor
-   41..44: like 1..4, set TransparentMode=tmFixed, Transparent, then TransparentColor
-   51..54: like 1..4, set TransparentMode=tmFixed, TransparentColor, finally Transparent }
+    5: before loading from file
+    6: after loading from file
+   11..16: like 1..6, set Transparent, then TransparentColor
+   21..26: like 1..6, set TransparentColor, then set Transparent
+   31..36: like 1..6, set Transparent, TransparentMode=tmfixed, then TransparentColor
+   41..46: like 1..6, set TransparentMode=tmFixed, Transparent, then TransparentColor
+   51..56: like 1..6, set TransparentMode=tmFixed, TransparentColor, finally Transparent }
 procedure TTransparentBitmapTest.DoTestTransparent(ACodeMode, ATransparentCode: Integer);
 
   procedure ApplyTransparent;
@@ -621,6 +666,7 @@ var
   actualBmp: TBitmap;
   equal: Boolean;
   msg: String;
+  fn: String;
 begin
   FreeAndNil(FTestBitmap);
   expectedBmp := TBitmap.Create;
@@ -631,30 +677,48 @@ begin
       FTestBitmap.PixelFormat := FPixelFormat;
 
       // Mode 1: Set transparent immediately after TBitmap.Create;
-      if (ATransparentCode mod 10 = 1) then
+      if (ATransparentCode mod 10 in [1, 5]) then
         ApplyTransparent;
 
-      FTestBitmap.Width := expectedBmp.Width;
-      FTestBitmap.Height := expectedBmp.Height;
-      // Mode 2: Set transparent after TBitmap.SetSize;
-      if ATransparentCode mod 10 = 2 then
-        ApplyTransparent ;
+      // Load image modes
+      if (ATransparentCode mod 10 in [5, 6]) then
+      begin
+        case FPixelFormat of
+          pf24Bit: fn := 'expected_redBorder_blueRect.bmp';
+          pf32Bit: fn := 'expected_redBorder_blueRect_32bpp.bmp';
+        end;
+        FTestBitmap.LoadFromFile(EXPECTED_IMG_DIR + fn);
+        // Set Transparent after loading
+        if ATransparentCode mod 10 = 6 then
+          ApplyTransparent;
+      end else
+      // Draw the image by code
+      begin
+        FTestBitmap.Width := expectedBmp.Width;
+        FTestBitmap.Height := expectedBmp.Height;
 
-      FTestBitmap.Canvas.Brush.Color := clRed;
-      FTestBitmap.Canvas.FillRect(Rect(0, 0, FTestBitmap.Width, FTestBitmap.Height));
-      // Mode 3: Set transparent after creating handle
-      if ATransparentCode mod 10 = 3 then
-        ApplyTransparent;
+        // Mode 2: Set transparent after TBitmap.SetSize;
+        if ATransparentCode mod 10 = 2 then
+          ApplyTransparent ;
 
-      FTestBitmap.Canvas.Brush.Color := clBlue;
-      FTestBitmap.Canvas.FillRect(Rect(8, 8, 24, 24));
+        FTestBitmap.Canvas.Brush.Color := clRed;
+        FTestBitmap.Canvas.FillRect(Rect(0, 0, FTestBitmap.Width, FTestBitmap.Height));
+        // Mode 3: Set transparent after creating handle
+        if ATransparentCode mod 10 = 3 then
+          ApplyTransparent;
 
-      // Mode 4: Set transparent after creating handle
-      if ATransparentCode mod 10 = 4 then
-        ApplyTransparent;
+        FTestBitmap.Canvas.Brush.Color := clBlue;
+        FTestBitmap.Canvas.FillRect(Rect(8, 8, 24, 24));
 
-      FTestBitmap.SaveToFile('testbitmap.bmp');
+        // Mode 4: Set transparent after creating handle
+        if ATransparentCode mod 10 = 4 then
+          ApplyTransparent;
 
+        FTestBitmap.SaveToFile('testbitmap.bmp');
+      end;
+
+      // Check the image: paint it onto a form, take a "screenshot" and compare
+      // with the reference image pixel by pixel to detect transparency "visually"
       actualBmp := TBitmap.Create;
       try
         GetBitmapScreenshot(ATransparentCode, actualBmp);
@@ -835,11 +899,43 @@ begin
 end;
 
 // Border part must be transparent (= white in this setup)
+// Sets Transparent = TRUE.
+// Loads the original bitmap from file
+procedure TTransparentBitmapTest.BorderTransparent_BeforeLoad;
+begin
+  DoTestTransparent(1, 5);
+end;
+
+// Border part must be transparent (= white in this setup)
+// Sets Transparent = TRUE.
+// Loads the original bitmap from file
+procedure TTransparentBitmapTest.BorderTransparent_AfterLoad;
+begin
+  DoTestTransparent(1, 6);
+end;
+
+// Border part must be transparent (= white in this setup)
 // Transparent is set at end. Sets also TransparentColor.
 // Transparent is set BEFORE TransparentColor
-procedure TTransparentBitmapTest.BorderTransparent_AtEnd_BeforeTransparentColor;
+procedure TTransparentBitmapTest.BorderTransparent_AtEnd_T_TColor;
 begin
   DoTestTransparent(1, 14);
+end;
+
+// Border part must be transparent (= white in this setup)
+// Image is loaded from file. Transparent is set BEFORE loading.
+// Transparent is set BEFORE TransparentColor
+procedure TTransparentBitmapTest.BorderTransparent_BeforeLoad_T_TColor;
+begin
+  DoTestTransparent(1, 15);
+end;
+
+// Border part must be transparent (= white in this setup)
+// Image is loaded from file. Transparent is set AFTER loading.
+// Transparent is set BEFORE TransparentColor
+procedure TTransparentBitmapTest.BorderTransparent_AfterLoad_T_TColor;
+begin
+  DoTestTransparent(1, 16);
 end;
 
 // Border part must be transparent (= white in this setup)
@@ -848,6 +944,22 @@ end;
 procedure TTransparentBitmapTest.BorderTransparent_AtEnd_TColor_T;
 begin
   DoTestTransparent(1, 24);
+end;
+
+// Border part must be transparent (= white in this setup)
+// Image is loaded from file. Transparent is set BEFORE loading.
+// Transparent is set AFTER TransparentColor
+procedure TTransparentBitmapTest.BorderTransparent_BeforeLoad_TColor_T;
+begin
+  DoTestTransparent(1, 25);
+end;
+
+// Border part must be transparent (= white in this setup)
+// Image is loaded from file. Transparent is set AFTER loading.
+// Transparent is set BEFORE TransparentColor
+procedure TTransparentBitmapTest.BorderTransparent_AfterLoad_TColor_T;
+begin
+  DoTestTransparent(1, 26);
 end;
 
 // Border part must be transparent (= white in this setup)
@@ -880,7 +992,7 @@ end;
 // Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
 // Transparent is set immediately after bitmap construction. Sets also TransparentColor.
 // Transparent is set before TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AfterCreate_BeforeTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterCreate_T_TColor;
 begin
   DoTestTransparent(2, 11);
 end;
@@ -889,7 +1001,7 @@ end;
 // Transparent-related properties are set immediately after bitmap construction.
 // Sets also TransparentColor.
 // Transparent is set after TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AfterCreate_AfterTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterCreate_TColor_T;
 begin
   DoTestTransparent(2, 21);
 end;
@@ -924,7 +1036,7 @@ end;
 // Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
 // Transparent is set immediately after setting bitmap size. Set also TransparentColor
 // Transparent is set before TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AfterSetSize_BeforeTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterSetSize_T_TColor;
 begin
   DoTestTransparent(2, 12);
 end;
@@ -932,7 +1044,7 @@ end;
 // Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
 // Transparent is set immediately after setting bitmap size. Set also TransparentColor
 // Transparent is set after TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AfterSetSize_AfterTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterSetSize_TColor_T;
 begin
   DoTestTransparent(2, 22);
 end;
@@ -967,7 +1079,7 @@ end;
 // Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
 // Transparent is set immediately after handle creation. Sets also TransparentColor.
 // Transparent is set before TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AfterHandle_BeforeTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterHandle_T_TColor;
 begin
   DoTestTransparent(2, 13);
 end;
@@ -976,7 +1088,7 @@ end;
 // Transparent is set immediately after handle creation.
 // Sets also TransparentColor.
 // Transparent is set after TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AfterHandle_AfterTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterHandle_TColor_T;
 begin
   DoTestTransparent(2, 23);
 end;
@@ -1011,18 +1123,55 @@ end;
 // Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
 // Transparent is set at end. Also sets TransparentColor.
 // Transparent is set before TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AtEnd_BeforeTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AtEnd_T_TColor;
 begin
   DoTestTransparent(2, 14);
 end;
 
 // Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
+// Image is loaded from file.
+// Transparent is set BEFORE loading. Also sets TransparentColor.
+// Transparent is set BEFORE TransparentColor
+procedure TTransparentBitmapTest.InnerRectTransparent_BeforeLoad_T_TColor;
+begin
+  DoTestTransparent(2, 15);
+end;
+
+// Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
+// Image is loaded from file.
+// Transparent is set AFter loading. Also sets TransparentColor.
+// Transparent is set BEFORE TransparentColor
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterLoad_T_TColor;
+begin
+  DoTestTransparent(2, 16);
+end;
+
+// Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
 // Transparent is set at end. Also sets TransparentColor.
 // Transparent is set after TransparentColor
-procedure TTransparentBitmapTest.InnerRectTransparent_AtEnd_AfterTransparentColor;
+procedure TTransparentBitmapTest.InnerRectTransparent_AtEnd_TColor_T;
 begin
   DoTestTransparent(2, 24);
 end;
+
+// Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
+// Image is loaded from file.
+// Transparent is set BEFORE loading. Also sets TransparentColor.
+// Transparent is set AFTER TransparentColor
+procedure TTransparentBitmapTest.InnerRectTransparent_BeforeLoad_TColor_T;
+begin
+  DoTestTransparent(2, 25);
+end;
+
+// Inner rectangle (blue) must be transparent (i.e. becomes white in this setup)
+// Image is loaded from file.
+// Transparent is set AFTER loading. Also sets TransparentColor.
+// Transparent is set AFTER TransparentColor
+procedure TTransparentBitmapTest.InnerRectTransparent_AfterLoad_TColor_T;
+begin
+  DoTestTransparent(2, 26);
+end;
+
 
 // Inner rectangle (blue) must be transparent (i.e. become white in this setup)
 // Transparent-related properties are set at the end after all drawing.
