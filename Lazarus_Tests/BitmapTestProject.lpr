@@ -3,7 +3,7 @@ program BitmapTestProject;
 {$mode objfpc}{$H+}
 
 uses
-  Interfaces, Forms, GuiTestRunner,
+  InterfaceBase, Interfaces, Forms, GuiTestRunner,
   BitmapTransparentTests;
 
 {$R *.res}
@@ -11,6 +11,7 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TGuiTestRunner, TestRunner);
+  TestRunner.Caption := TestRunner.Caption + ' - [' + GetLCLWidgetTypeName + ']';
   Application.Run;
 end.
 

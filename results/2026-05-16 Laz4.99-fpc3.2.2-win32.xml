@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestResults>
+  <!-- Generated using FPCUnit on 2026-05-16 11:56:58-->
+  <TestListing>
+    <TestSuite Name="" ElapsedTime="00:00:08.127" NumberOfErrors="0" NumberOfFailures="48" NumberOfRunTests="172" NumberOfIgnoredTests="0">
+      <TestSuite Name="24Bit Tests" ElapsedTime="00:00:04.443" NumberOfErrors="0" NumberOfFailures="2" NumberOfRunTests="110" NumberOfIgnoredTests="0">
+        <TestSuite Name="Not Transparent" ElapsedTime="00:00:00.078" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="2" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_24Bit_NotTransparent" ElapsedTime="00:00:00.047" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="1" NumberOfIgnoredTests="0">
+            <Test Name="NotTransparent" Result="OK" ElapsedTime="00:00:00.035"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_24Bit_NotTransparent" ElapsedTime="00:00:00.031" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="1" NumberOfIgnoredTests="0">
+            <Test Name="NotTransparent" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="Set Transparent = true" ElapsedTime="00:00:01.279" NumberOfErrors="0" NumberOfFailures="2" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_24Bit_Transparent" ElapsedTime="00:00:00.195" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="6" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate" Result="OK" ElapsedTime="00:00:00.032"/>
+            <Test Name="BorderTransparent_AfterSetSize" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterHandle" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AtEnd" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_BeforeLoad" Result="OK" ElapsedTime="00:00:00.022"/>
+            <Test Name="BorderTransparent_AfterLoad" Result="OK" ElapsedTime="00:00:00.025"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_24Bit_Transparent" ElapsedTime="00:00:01.084" NumberOfErrors="0" NumberOfFailures="2" NumberOfRunTests="6" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate" Result="Failed" ElapsedTime="00:00:00.891">
+              <Message>TAssignTransparentBitmapTest_24Bit_Transparent.BorderTransparent_AfterCreate: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterSetSize" Result="Failed" ElapsedTime="00:00:00.050">
+              <Message>TAssignTransparentBitmapTest_24Bit_Transparent.BorderTransparent_AfterSetSize: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterHandle" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AtEnd" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_BeforeLoad" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterLoad" Result="OK" ElapsedTime="00:00:00.024"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="First set Transparent, then TransparentColor" ElapsedTime="00:00:00.788" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="24" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_24Bit_T_TColor" ElapsedTime="00:00:00.404" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterSetSize_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterHandle_T_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AtEnd_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_BeforeLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterCreate_T_TColor" Result="OK" ElapsedTime="00:00:00.043"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterHandle_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AtEnd_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_BeforeLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.031"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_24Bit_T_TColor" ElapsedTime="00:00:00.384" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_T_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AfterSetSize_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterHandle_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AtEnd_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_BeforeLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterCreate_T_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterHandle_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AtEnd_T_TColor" Result="OK" ElapsedTime="00:00:00.027"/>
+            <Test Name="InnerRectTransparent_BeforeLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="First set TransparentColor, then Transparent = true" ElapsedTime="00:00:00.767" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="24" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_24Bit_TColor_T" ElapsedTime="00:00:00.379" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterSetSize_TColor_T" Result="OK" ElapsedTime="00:00:00.022"/>
+            <Test Name="BorderTransparent_AfterHandle_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AtEnd_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_BeforeLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterHandle_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AtEnd_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_BeforeLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_24Bit_TColor_T" ElapsedTime="00:00:00.388" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterSetSize_TColor_T" Result="OK" ElapsedTime="00:00:00.026"/>
+            <Test Name="BorderTransparent_AfterHandle_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AtEnd_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_BeforeLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterHandle_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AtEnd_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_BeforeLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.026"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="First set Transparent, then TransparentMode, finally TransparentColor" ElapsedTime="00:00:00.528" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="16" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_24Bit_T_TMode_TColor" ElapsedTime="00:00:00.259" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="8" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterSetSize_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterHandle_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AtEnd_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.026"/>
+            <Test Name="InnerRectTransparent_AfterCreate_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.027"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterHandle_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AtEnd_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_24Bit_T_TMode_TColor" ElapsedTime="00:00:00.269" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="8" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AfterSetSize_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterHandle_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AtEnd_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterCreate_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterHandle_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.033"/>
+            <Test Name="InnerRectTransparent_AtEnd_T_TMode_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="First set TransparentMode, then Transparent, finally TransparentColor" ElapsedTime="00:00:00.503" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="16" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_24Bit_TMode_T_TColor" ElapsedTime="00:00:00.253" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="8" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterSetSize_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterHandle_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AtEnd_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.027"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterHandle_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AtEnd_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_24Bit_TMode_T_TColor" ElapsedTime="00:00:00.250" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="8" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterSetSize_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterHandle_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AtEnd_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterHandle_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AtEnd_TMode_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="First set TransparentMode, then TransparentColor, finally Transparent" ElapsedTime="00:00:00.500" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="16" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_24Bit_TMode_TColor_T" ElapsedTime="00:00:00.253" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="8" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterSetSize_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterHandle_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="BorderTransparent_AtEnd_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterHandle_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AtEnd_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_24Bit_TMode_TColor_T" ElapsedTime="00:00:00.247" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="8" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterSetSize_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="BorderTransparent_AfterHandle_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AtEnd_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterSetSize_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterHandle_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AtEnd_TMode_TColor_T" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+        </TestSuite>
+      </TestSuite>
+      <TestSuite Name="32Bit Tests" ElapsedTime="00:00:03.684" NumberOfErrors="0" NumberOfFailures="46" NumberOfRunTests="62" NumberOfIgnoredTests="0">
+        <TestSuite Name="Transparent = false" ElapsedTime="00:00:00.062" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="2" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_32Bit_NotTransparent" ElapsedTime="00:00:00.030" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="1" NumberOfIgnoredTests="0">
+            <Test Name="NotTransparent" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_32Bit_NotTransparent" ElapsedTime="00:00:00.032" NumberOfErrors="0" NumberOfFailures="0" NumberOfRunTests="1" NumberOfIgnoredTests="0">
+            <Test Name="NotTransparent" Result="OK" ElapsedTime="00:00:00.024"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="Transparent = true" ElapsedTime="00:00:00.769" NumberOfErrors="0" NumberOfFailures="10" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_32Bit_Transparent" ElapsedTime="00:00:00.419" NumberOfErrors="0" NumberOfFailures="5" NumberOfRunTests="6" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate" Result="Failed" ElapsedTime="00:00:00.083">
+              <Message>TDrawTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterCreate: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterSetSize" Result="Failed" ElapsedTime="00:00:00.059">
+              <Message>TDrawTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterSetSize: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterHandle" Result="Failed" ElapsedTime="00:00:00.058">
+              <Message>TDrawTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterHandle: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AtEnd" Result="Failed" ElapsedTime="00:00:00.062">
+              <Message>TDrawTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AtEnd: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_BeforeLoad" Result="Failed" ElapsedTime="00:00:00.090">
+              <Message>TDrawTransparentBitmapTest_32Bit_Transparent.BorderTransparent_BeforeLoad: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterLoad" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_32Bit_Transparent" ElapsedTime="00:00:00.350" NumberOfErrors="0" NumberOfFailures="5" NumberOfRunTests="6" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate" Result="Failed" ElapsedTime="00:00:00.057">
+              <Message>TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterCreate: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterSetSize" Result="Failed" ElapsedTime="00:00:00.053">
+              <Message>TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterSetSize: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterHandle" Result="Failed" ElapsedTime="00:00:00.054">
+              <Message>TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AfterHandle: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AtEnd" Result="Failed" ElapsedTime="00:00:00.062">
+              <Message>TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_AtEnd: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_BeforeLoad" Result="Failed" ElapsedTime="00:00:00.057">
+              <Message>TAssignTransparentBitmapTest_32Bit_Transparent.BorderTransparent_BeforeLoad: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterLoad" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="First set Transparent, then TransparentColor" ElapsedTime="00:00:01.451" NumberOfErrors="0" NumberOfFailures="18" NumberOfRunTests="24" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_32Bit_T_TColor" ElapsedTime="00:00:00.707" NumberOfErrors="0" NumberOfFailures="10" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_T_TColor" Result="Failed" ElapsedTime="00:00:00.061">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AfterCreate_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterSetSize_T_TColor" Result="Failed" ElapsedTime="00:00:00.059">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AfterSetSize_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterHandle_T_TColor" Result="Failed" ElapsedTime="00:00:00.057">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AfterHandle_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AtEnd_T_TColor" Result="Failed" ElapsedTime="00:00:00.062">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AtEnd_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_BeforeLoad_T_TColor" Result="Failed" ElapsedTime="00:00:00.056">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_BeforeLoad_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+            <Test Name="InnerRectTransparent_AfterCreate_T_TColor" Result="Failed" ElapsedTime="00:00:00.049">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AfterCreate_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterSetSize_T_TColor" Result="Failed" ElapsedTime="00:00:00.057">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AfterSetSize_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterHandle_T_TColor" Result="Failed" ElapsedTime="00:00:00.058">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AfterHandle_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AtEnd_T_TColor" Result="Failed" ElapsedTime="00:00:00.058">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AtEnd_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_BeforeLoad_T_TColor" Result="Failed" ElapsedTime="00:00:00.053">
+              <Message>TDrawTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_BeforeLoad_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_32Bit_T_TColor" ElapsedTime="00:00:00.744" NumberOfErrors="0" NumberOfFailures="8" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_T_TColor" Result="Failed" ElapsedTime="00:00:00.052">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AfterCreate_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterSetSize_T_TColor" Result="Failed" ElapsedTime="00:00:00.060">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AfterSetSize_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterHandle_T_TColor" Result="Failed" ElapsedTime="00:00:00.068">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AfterHandle_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AtEnd_T_TColor" Result="Failed" ElapsedTime="00:00:00.050">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.BorderTransparent_AtEnd_T_TColor: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_BeforeLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="BorderTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterCreate_T_TColor" Result="Failed" ElapsedTime="00:00:00.063">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AfterCreate_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterSetSize_T_TColor" Result="Failed" ElapsedTime="00:00:00.142">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AfterSetSize_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterHandle_T_TColor" Result="Failed" ElapsedTime="00:00:00.065">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AfterHandle_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AtEnd_T_TColor" Result="Failed" ElapsedTime="00:00:00.062">
+              <Message>TAssignTransparentBitmapTest_32Bit_T_TColor.InnerRectTransparent_AtEnd_T_TColor: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_BeforeLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.022"/>
+            <Test Name="InnerRectTransparent_AfterLoad_T_TColor" Result="OK" ElapsedTime="00:00:00.023"/>
+          </TestSuite>
+        </TestSuite>
+        <TestSuite Name="First set TransparentColor, then Transparent = true" ElapsedTime="00:00:01.402" NumberOfErrors="0" NumberOfFailures="18" NumberOfRunTests="24" NumberOfIgnoredTests="0">
+          <TestSuite Name="TDrawTransparentBitmapTest_32Bit_TColor_T" ElapsedTime="00:00:00.733" NumberOfErrors="0" NumberOfFailures="10" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TColor_T" Result="Failed" ElapsedTime="00:00:00.066">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AfterCreate_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterSetSize_TColor_T" Result="Failed" ElapsedTime="00:00:00.059">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AfterSetSize_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterHandle_TColor_T" Result="Failed" ElapsedTime="00:00:00.050">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AfterHandle_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AtEnd_TColor_T" Result="Failed" ElapsedTime="00:00:00.062">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AtEnd_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_BeforeLoad_TColor_T" Result="Failed" ElapsedTime="00:00:00.063">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_BeforeLoad_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TColor_T" Result="Failed" ElapsedTime="00:00:00.057">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AfterCreate_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterSetSize_TColor_T" Result="Failed" ElapsedTime="00:00:00.059">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AfterSetSize_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterHandle_TColor_T" Result="Failed" ElapsedTime="00:00:00.058">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AfterHandle_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AtEnd_TColor_T" Result="Failed" ElapsedTime="00:00:00.061">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AtEnd_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_BeforeLoad_TColor_T" Result="Failed" ElapsedTime="00:00:00.060">
+              <Message>TDrawTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_BeforeLoad_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.024"/>
+          </TestSuite>
+          <TestSuite Name="TAssignTransparentBitmapTest_32Bit_TColor_T" ElapsedTime="00:00:00.669" NumberOfErrors="0" NumberOfFailures="8" NumberOfRunTests="12" NumberOfIgnoredTests="0">
+            <Test Name="BorderTransparent_AfterCreate_TColor_T" Result="Failed" ElapsedTime="00:00:00.057">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AfterCreate_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterSetSize_TColor_T" Result="Failed" ElapsedTime="00:00:00.066">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AfterSetSize_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AfterHandle_TColor_T" Result="Failed" ElapsedTime="00:00:00.061">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AfterHandle_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_AtEnd_TColor_T" Result="Failed" ElapsedTime="00:00:00.057">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.BorderTransparent_AtEnd_TColor_T: "Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=0, y=0: ActualColor=$000000FF; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="BorderTransparent_BeforeLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.022"/>
+            <Test Name="BorderTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterCreate_TColor_T" Result="Failed" ElapsedTime="00:00:00.061">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AfterCreate_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterSetSize_TColor_T" Result="Failed" ElapsedTime="00:00:00.054">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AfterSetSize_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AfterHandle_TColor_T" Result="Failed" ElapsedTime="00:00:00.059">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AfterHandle_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_AtEnd_TColor_T" Result="Failed" ElapsedTime="00:00:00.061">
+              <Message>TAssignTransparentBitmapTest_32Bit_TColor_T.InnerRectTransparent_AtEnd_TColor_T: "Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</Message>
+              <ExceptionClass>EAssertionFailedError</ExceptionClass>
+              <ExceptionMessage>"Bitmaps do not match (At pixel x=8, y=8: ActualColor=$00FF0000; ExpectedColor=$00FFFFFF)." expected: &lt;True&gt; but was: &lt;False&gt;</ExceptionMessage>
+            </Test>
+            <Test Name="InnerRectTransparent_BeforeLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.025"/>
+            <Test Name="InnerRectTransparent_AfterLoad_TColor_T" Result="OK" ElapsedTime="00:00:00.026"/>
+          </TestSuite>
+        </TestSuite>
+      </TestSuite>
+    </TestSuite>
+  </TestListing>
+  <NumberOfRunTests>172</NumberOfRunTests>
+  <NumberOfErrors>0</NumberOfErrors>
+  <NumberOfFailures>48</NumberOfFailures>
+  <NumberOfIgnoredTests>0</NumberOfIgnoredTests>
+  <TotalElapsedTime>00:00:08.130</TotalElapsedTime>
+  <DateTimeRan>2026-05-16 11:57:06</DateTimeRan>
+</TestResults>

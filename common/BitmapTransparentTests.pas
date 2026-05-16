@@ -548,6 +548,7 @@ procedure TTransparentBitmapTest.GetBitmapScreenShot(ATransparentCode: Integer;
 var
   F: TForm;
   img: TImage;
+  x, y: Integer;
 begin
   F := TForm.CreateNew(nil);
   F.Width := FTestBitmap.Width + 100;
@@ -568,11 +569,18 @@ begin
   F.Show;
   AScreenshot.Width := FTestBitmap.Width;
   AScreenshot.Height := FTestBitmap.Height;
-  {$IFDEF FPC}
-  F.PaintTo(AScreenshot.Canvas, -GetSystemMetrics(SM_CXSIZEFRAME), -GetSystemMetrics(SM_CYCAPTION)-GetSystemMetrics(SM_CYSIZEFRAME));
-  {$ELSE}
+ {$IFDEF FPC}
+  {$IFDEF MSWINDOWS}
+  x := -GetSystemMetrics(SM_CXSIZEFRAME);
+  y := -(GetSystemMetrics(SM_CYSIZEFRAME) + GetSystemMetrics(SM_CYCAPTION));
+ {$ELSE}
+  x := 0;
+  y := 0;
+ {$ENDIF}
+  F.PaintTo(AScreenshot.Canvas, x, y);
+ {$ELSE}
   F.PaintTo(AScreenshot.Canvas, -1, -1);
-  {$ENDIF}
+ {$ENDIF}
   AScreenshot.SaveToFile('screenshot.bmp');
   F.Free;
 end;
